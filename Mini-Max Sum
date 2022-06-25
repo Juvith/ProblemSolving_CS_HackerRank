@@ -1,0 +1,20 @@
+class Result
+{
+    public static void miniMaxSum(List<int> arr)
+    {
+            List<long> lg = arr.Select(i => (long)i).ToList();
+            long max = lg.Max();
+            long min = lg.Min();
+            
+            lg.Remove(max);
+            lg.Remove(min);
+            long sum = lg.Sum();
+            
+            long max_sum = sum + max;
+            long min_sum = sum + min;
+            
+           Console.WriteLine($"{min_sum} {max_sum}");
+            
+    }
+
+}
