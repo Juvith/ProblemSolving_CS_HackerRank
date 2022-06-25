@@ -1,0 +1,25 @@
+class Result
+{
+    public static List<int> gradingStudents(List<int> grades)
+    {
+            int a = grades.Count();
+            int j; 
+            int diff;
+            for (int i=0;i<a;i++)
+            {
+                if (grades[i]>=38)
+                {
+                    j = (int)((grades[i]/5 + 1)*5);
+                    diff = j - grades[i];
+                    
+                    if (diff<3)
+                    {
+                        grades[i]=j;
+                    }
+                }
+            }
+            
+        return grades; 
+    }
+
+}
