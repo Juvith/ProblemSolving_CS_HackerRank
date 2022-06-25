@@ -1,0 +1,18 @@
+class Result
+{
+
+    public static void bonAppetit(List<int> bill, int k, int b)
+    {
+            int a = bill[k];
+            int d = (bill.Sum()-a)/2; //anna pays
+            int f = Math.Abs((bill.Sum()/2)-d);
+            string c = "Bon Appetit";
+            if (d==b){
+                Console.WriteLine(c);
+            }
+            else{
+                Console.WriteLine(f);
+            }
+    }
+
+}
