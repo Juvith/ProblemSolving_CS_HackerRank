@@ -1,0 +1,23 @@
+class Result
+{
+    public static int findDigits(int n)
+    {
+        string s = n.ToString();
+        int num=0;
+        double rem=0; 
+        int count=0;
+        foreach (char c in s)
+        {
+            num = (int)Char.GetNumericValue(c);
+            rem = (double)n%num;
+            
+            if (rem==0)
+            {
+                ++count;
+            }
+        }
+        
+        return count;
+    }
+
+}
